@@ -47,7 +47,9 @@ PythonshellInNode.prototype.onInput = function(msg, out, err) {
     return
   }
 
-  var spawnCmd = (this.virtualenv ? this.virtualenv + '/bin/' : '') + 'python'
+  //changed by gbrito
+  //command now explicitly invokes python3
+  var spawnCmd = (this.virtualenv ? this.virtualenv + '/bin/' : '') + 'python3'
 
   if (this.stdInData){
     if (!this.py){
